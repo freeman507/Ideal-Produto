@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.controller.BuscaController">
+   <children>
+      <VBox layoutX="441.0" layoutY="284.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Produto:">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="procurarTxtField">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="procurar" mnemonicParsing="false" onAction="#handleButtonProcurarProduto" text="Procurar" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="669.0" prefWidth="1024.0">
+               <children>
+                  <TableView fx:id="tableView" editable="true" prefHeight="493.0" prefWidth="734.0" tableMenuButtonVisible="true">
+                    <columns>
+                        <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="produtoColumn" prefWidth="164.66665649414062" text="Produto" />
+                      <TableColumn fx:id="mercadoColumn" prefWidth="324.33331298828125" text="Mercado" />
+                        <TableColumn fx:id="precoColumn" prefWidth="129.66668701171875" text="Preço" />
+                    </columns>
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                  </TableView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="cadastrar" mnemonicParsing="false" onAction="#handleButtonCadastrarProduto" text="Cadastrar Produto">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="deletar" mnemonicParsing="false" onAction="#handleButtonDeletarProduto" text="Deletar Produto">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

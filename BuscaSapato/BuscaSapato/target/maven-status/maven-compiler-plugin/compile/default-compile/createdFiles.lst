@@ -1,0 +1,6 @@
+com\mycompany\models\Assistente.class
+com\mycompany\models\Produto.class
+com\mycompany\buscasapato\MainApp.class
+com\mycompany\controller\BuscaController.class
+com\mycompany\controller\DeletarController.class
+com\mycompany\controller\CadastrarController.class
